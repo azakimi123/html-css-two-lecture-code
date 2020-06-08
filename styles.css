@@ -20,17 +20,25 @@ div {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+    bottom: 5px;
+    left: 50px;
+    z-index: 2;
 }
 
 .fixed {
     background-image: url('https://media.makeameme.org/created/fixed.jpg');
     background-size: cover;
     background-position: center;
+    /* position: fixed;
+    top: 0px;
+    left: 0px; */
 }
 
 .absolute-parent {
     height: 250px;
     width: 250px;
+    position: relative;
 }
 
 .absolute-child {
@@ -39,6 +47,10 @@ div {
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: center;
+    position:absolute;
+    bottom: 0px;
+    right: 0px;
+
 }
 
 .sticky {
@@ -46,12 +58,25 @@ div {
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: center;
+    /* position: sticky;
+    top: 20px; */
 }
 
 .flexbox-examples {
     height: 75vh;
     box-sizing: border-box;
     border: 2px solid black;
+    /* padding-left: 200px; */
+    display: flex;
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+    /* align-items: flex-end; */
+    align-items: center;
 }
 
 .flexbox-examples div {
@@ -64,5 +89,9 @@ div {
 }
 
 .overflow-shadow-example {
+    width: 200px;
     margin: 0 auto;
+    /* overflow: hidden; */
+    overflow: scroll;
+    box-shadow: 2px 2px 4px 1px rgb(85, 81, 81);
 }
